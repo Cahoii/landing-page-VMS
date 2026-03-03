@@ -1,5 +1,3 @@
-import { withCloudflare } from '@opennextjs/cloudflare'
-
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   eslint: {
@@ -30,5 +28,4 @@ const nextConfig = {
   },
 }
 
-export default withCloudflare(nextConfig)
-
+export default nextConfig
