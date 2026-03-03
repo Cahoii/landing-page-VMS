@@ -54,7 +54,7 @@ export const teamMembers = [
         },
     },
     {
-        name: "Nguyen Tuan Anh",
+        name: "Vu Tuan Anh",
         role: "QA Engineer",
         imageSrc: "/members/member6.webp",
         socialLinks: {
