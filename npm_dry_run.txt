@@ -10,7 +10,7 @@ Files\nodejs/node_mo ...
  
 npm error ERESOLVE could not resolve
 npm error
-npm error While resolving: my-v0-project@0.1.0
+npm error While resolving: visual-math-studio@0.1.0
 npm error Found: @vercel/analytics@1.5.0
 npm error node_modules/@vercel/analytics
 npm error   @vercel/analytics@"latest" from the root 
