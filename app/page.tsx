@@ -4,7 +4,7 @@ import { LiquidMetalBackground } from "@/components/liquid-metal-background"
 import { FloatingNavbar } from "@/components/floating-navbar"
 import { ShinyButton } from "@/components/ui/shiny-button"
 import { Feature } from "@/components/ui/feature-with-advantages"
-import { BentoPricing } from "@/components/ui/bento-pricing"
+import { AppPreview } from "@/components/ui/app-preview"
 import { ContactCard } from "@/components/ui/contact-card"
 import { AboutQuote } from "@/components/ui/about-quote"
 import { Input } from "@/components/ui/input"
@@ -17,7 +17,7 @@ import { useEffect, useRef } from "react"
 
 export default function Home() {
   const scrollContainerRef = useRef<HTMLDivElement>(null)
-  const pricingSectionRef = useRef<HTMLDivElement>(null)
+  const previewSectionRef = useRef<HTMLDivElement>(null)
   const aboutSectionRef = useRef<HTMLDivElement>(null)
   const contactSectionRef = useRef<HTMLDivElement>(null)
 
@@ -31,10 +31,10 @@ export default function Home() {
       const containerWidth = scrollContainer.offsetWidth
       const currentSection = Math.round(currentScroll / containerWidth)
 
-      if (currentSection === 2 && pricingSectionRef.current) {
-        const pricingSection = pricingSectionRef.current
-        const isAtTop = pricingSection.scrollTop === 0
-        const isAtBottom = pricingSection.scrollTop + pricingSection.clientHeight >= pricingSection.scrollHeight - 1
+      if (currentSection === 2 && previewSectionRef.current) {
+        const previewSection = previewSectionRef.current
+        const isAtTop = previewSection.scrollTop === 0
+        const isAtBottom = previewSection.scrollTop + previewSection.clientHeight >= previewSection.scrollHeight - 1
 
         if (delta > 0 && !isAtBottom) {
           return
@@ -190,8 +190,8 @@ export default function Home() {
         </section>
 
         <section
-          id="pricing"
-          ref={pricingSectionRef}
+          id="preview"
+          ref={previewSectionRef}
           className="relative min-w-full snap-start overflow-y-auto px-4 pt-24 pb-20 [&::-webkit-scrollbar]:hidden"
           style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
         >
@@ -205,17 +205,16 @@ export default function Home() {
             )}
           />
 
-          <div className="relative z-10 mx-auto w-full max-w-5xl">
-            <div className="mx-auto mb-10 max-w-2xl text-center">
+          <div className="relative z-10 mx-auto w-full max-w-6xl">
+            <div className="mx-auto mb-10 max-w-3xl text-center">
               <h1 className="text-4xl font-extrabold tracking-tight lg:text-6xl text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] font-open-sans-custom">
-                Plans and Pricing
+                App Interface
               </h1>
               <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                Choose the perfect plan for your needs. From individual creators to enterprise teams, we have flexible
-                pricing options to help you succeed.
+                Experience the clean, intuitive, and modern workspace designed specifically to make visualizing math a breeze right on your Windows machine.
               </p>
             </div>
-            <BentoPricing />
+            <AppPreview />
           </div>
         </section>
 

@@ -43,10 +43,10 @@ export function FloatingNavbar() {
               Features
             </button>
             <button
-              onClick={() => scrollToSection("pricing")}
+              onClick={() => scrollToSection("preview")}
               className="text-sm font-open-sans-custom text-gray-300 transition-colors hover:text-white [text-shadow:_0_2px_6px_rgb(0_0_0_/_40%)]"
             >
-              Pricing
+              Preview
             </button>
             <button
               onClick={() => scrollToSection("about")}

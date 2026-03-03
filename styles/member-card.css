@@ -1,0 +1,171 @@
+/* Member Card Styles */
+.member-card {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 32px;
+  padding: 3px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 70px 30px -50px;
+}
+
+.member-card .profile-pic {
+  position: absolute;
+  width: calc(100% - 6px);
+  height: calc(100% - 6px);
+  top: 3px;
+  left: 3px;
+  border-radius: 29px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.member-card .profile-pic img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-position: center top;
+  transition: transform 0.6s ease;
+}
+
+/* Subtle Ken Burns zoom on hover */
+.member-card:hover .profile-pic img {
+  transform: scale(1.06);
+}
+
+.member-card .bottom {
+  position: absolute;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  top: calc(100% - 60px);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 29px;
+  z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px 0px inset;
+  overflow: hidden;
+  /* Reverse (mouse-out) transition — no delay so it closes immediately */
+  transition: top 0.45s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    border-radius 0.45s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.member-card .bottom .content {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  opacity: 0;
+  transform: translateY(8px);
+  /* Reverse: fade out quickly, no delay */
+  transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
+}
+
+.member-card .bottom .content .name {
+  display: block;
+  font-size: 1.2rem;
+  color: white;
+  font-weight: bold;
+  font-family: "Open Sans", sans-serif;
+}
+
+.member-card .bottom .content .role {
+  display: block;
+  font-size: 0.9rem;
+  color: rgba(209, 213, 219, 1);
+  margin-top: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+}
+
+.member-card .bottom .bottom-bottom {
+  position: absolute;
+  /* bottom: 50% + translateY(50%) = true vertical center regardless of element height */
+  bottom: 50%;
+  transform: translateY(50%);
+  left: 1.5rem;
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  /* Reverse transition — no delay */
+  transition: bottom 0.45s cubic-bezier(0.645, 0.045, 0.355, 1) 0s,
+    transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1) 0s;
+}
+
+.member-card .bottom .bottom-bottom .social-links-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.member-card .bottom .bottom-bottom .social-links-container svg {
+  height: 20px;
+  fill: white;
+  filter: drop-shadow(0 5px 5px rgba(130, 132, 165, 0.13));
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.member-card .bottom .bottom-bottom .social-links-container svg:hover {
+  fill: rgba(255, 255, 255, 0.6);
+  transform: scale(1.2);
+}
+
+.member-card .bottom .bottom-bottom .button {
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 20px;
+  font-size: 0.6rem;
+  padding: 0.4rem 0.6rem;
+  box-shadow: rgba(130, 132, 165, 0.13) 0px 5px 5px 0px;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s ease;
+}
+
+.member-card .bottom .bottom-bottom .button:hover {
+  background: rgba(229, 231, 235, 1);
+  color: black;
+}
+
+/* Hover state — only bottom panel expands */
+.member-card:hover .bottom {
+  top: 50%;
+  border-radius: 29px;
+  transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+/* Reveal name + role — delayed until panel has opened */
+.member-card:hover .bottom .content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease 0.35s, transform 0.35s ease 0.35s;
+}
+
+/* Move social icons to the bottom — delayed */
+.member-card:hover .bottom .bottom-bottom {
+  bottom: 1rem;
+  transform: translateY(0);
+  transition: bottom 0.45s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s,
+    transform 0.45s cubic-bezier(0.645, 0.045, 0.355, 1) 0.2s;
+}
+
+/* ── Accordion card slot ── */
+.accordion-card-slot {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  transition: flex 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion-card-slot:hover {
+  /* flex:3 gives exactly the 1/6 shrink ratio for the other 6 cards */
+  flex: 3;
+}
