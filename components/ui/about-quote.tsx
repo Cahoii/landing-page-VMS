@@ -16,16 +16,14 @@ export function AboutQuote() {
 
         <div className="relative z-20 mx-auto max-w-5xl rounded-[40px] py-6 md:p-10 xl:py-20">
           <h1 className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight text-white [text-shadow:_0_4px_20px_rgb(0_0_0_/_60%)] mb-6 md:mb-8 font-open-sans-custom">
-            About This Template
+            About Visual Math Studio
           </h1>
           <div className="space-y-4 md:space-y-6">
             <p className="text-base md:text-xl lg:text-2xl xl:text-3xl text-white/90 [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-open-sans-custom leading-relaxed">
-              We believe building beautiful, functional products should be simple. This template shows how AI and smart
-              prompting make it easy to turn ideas into clean, professional interfaces.
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
             </p>
             <p className="text-base md:text-xl lg:text-2xl xl:text-3xl text-white/90 [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)] font-open-sans-custom leading-relaxed">
-              It's designed to highlight key features, scale with your content, and let your AI-powered product
-              shine—without extra setup or complexity.
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Dolor sit amet consectetur adipiscing elit quisque faucibus.
             </p>
           </div>
         </div>

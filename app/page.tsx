@@ -11,7 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { MailIcon, PhoneIcon, MapPinIcon } from "lucide-react"
+import { MailIcon, PhoneIcon, MapPinIcon, FacebookIcon } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { useEffect, useRef } from "react"
 
@@ -241,7 +241,7 @@ export default function Home() {
                 About Us
               </h1>
               <p className="text-gray-300 mt-4 text-sm md:text-base font-open-sans-custom [text-shadow:_0_2px_10px_rgb(0_0_0_/_50%)]">
-                Learn more about our mission, vision, and the values that drive us forward.
+                Lorem ipsum dolor sit amet consectetur adipiscing elit.
               </p>
             </div>
             <AboutQuote />
@@ -271,17 +271,23 @@ export default function Home() {
                 {
                   icon: MailIcon,
                   label: "Email",
-                  value: "contact@21st.dev",
+                  value: "contact@gmail.com",
                 },
                 {
                   icon: PhoneIcon,
                   label: "Phone",
-                  value: "+92 312 1234567",
+                  value: "+84 123 456 789",
                 },
                 {
                   icon: MapPinIcon,
                   label: "Address",
-                  value: "Faisalabad, Pakistan",
+                  value: "Hoa Lac Hi-tech Park, km 29, Dai lo, Thang Long, Ha Noi",
+                  className: "col-span-2",
+                },
+                {
+                  icon: FacebookIcon,
+                  label: "Facebook",
+                  value: "https://www.facebook.com/visualstudiomath",
                   className: "col-span-2",
                 },
               ]}
