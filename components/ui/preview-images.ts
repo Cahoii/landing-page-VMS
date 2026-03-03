@@ -3,10 +3,10 @@
 // To update, add/remove .webp files in public/preview/ and restart dev server.
 
 export const PREVIEW_IMAGES: string[] = [
-  "/preview/01 copy 2.webp",
-  "/preview/01 copy 3.webp",
-  "/preview/01 copy 4.webp",
-  "/preview/01 copy 5.webp",
-  "/preview/01 copy.webp",
-  "/preview/01.webp"
+  "/preview/preview1.webp",
+  "/preview/preview2.webp",
+  "/preview/preview3.webp",
+  "/preview/preview4.webp",
+  "/preview/preview5.webp",
+  "/preview/preview6.webp"
 ]
